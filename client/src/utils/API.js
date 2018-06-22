@@ -14,7 +14,10 @@ export default {
     return axios.delete("/api/articles/" + id);
   },
   // Saves a article to the database
-  saveArticle: function(bookData) {
-    return axios.post("/api/articles", bookData);
+  saveArticle: function(articleData) {
+    return axios.post("/api/articles/saved/", articleData);
+  },
+  getSaved: function(query) {
+    return axios.get("/api/articles/saved/");
   }
 };

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Home from "./pages/Home"
+import Home from "./pages/Home";
+import Wrapper from "./components/Wrapper";
+import Jumbotron from "./components/Jumbotron";
 
 class App extends Component {
   state = {
@@ -8,7 +10,10 @@ class App extends Component {
   }
   render() {
     return (
-      <Home/>
+      <Wrapper>
+        <Jumbotron/>
+        <Home/>
+      </Wrapper>
     )
   }
 }

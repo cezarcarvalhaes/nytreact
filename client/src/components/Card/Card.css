@@ -1,0 +1,9 @@
+a {
+    color: #f2f2f2;
+}
+
+a:hover {
+  color: antiquewhite;
+  text-decoration: none;
+  text-shadow: 2px 2px #444444;  
+}
