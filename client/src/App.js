@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import Home from "./pages/Home";
+import Saved from "./pages/Saved"
 import Wrapper from "./components/Wrapper";
 import Jumbotron from "./components/Jumbotron";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
-  state = {
-    articles: [{ _id: 1, title: "go Brazil!", url: "none" }]
 
-  }
   render() {
     return (
-      <Wrapper>
-        <Jumbotron/>
-        <Home/>
-      </Wrapper>
+      <Router>
+        <Wrapper>
+          <Jumbotron />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/saved" component={Saved} />
+        </Wrapper>
+      </Router>
     )
   }
 }

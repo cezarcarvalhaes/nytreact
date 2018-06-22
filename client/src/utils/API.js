@@ -1,13 +1,9 @@
 import axios from "axios";
 
 export default {
-  // Gets all articles
+  // Gets all articles from NYT API
   getArticles: function(query) {
     return axios.get("/api/articles/" + query);
-  },
-  // Gets the article with the given id
-  getArticle: function(id) {
-    return axios.get("/api/articles/" + id);
   },
   // Deletes the article with the given id
   deleteArticle: function(id) {
@@ -17,7 +13,8 @@ export default {
   saveArticle: function(articleData) {
     return axios.post("/api/articles/saved/", articleData);
   },
-  getSaved: function(query) {
+  //Gets all articles from MongoDB
+  getSaved: function() {
     return axios.get("/api/articles/saved/");
   }
 };

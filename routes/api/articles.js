@@ -3,10 +3,10 @@ const axios = require("axios");
 const articlesController = require("../../controllers/articlesController");
 const nytUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=b9f91d369ff59547cd47b931d8cbc56b:0:74623931&q='
 
-// Matches with "/api/articles/:query
+// Matches with "/api/articles/
 router.get("/", (req, res) => {
-    let query = req.query.q;
-    console.log(nytUrl + query)
+    //saves the passed in search query from front end to pass to API URL
+    let query = req.query.q
     axios
         .get(nytUrl + query)
         .then((response) => res.json(response.data.response.docs))
@@ -20,8 +20,6 @@ router.route("/saved")
 
 // Matches with "/api/articles/:id"
 router.route("/:id")
-    //.get(articlesController.findById)
-    // .put(articlesController.update)
     .delete(articlesController.remove);
 
 module.exports = router;

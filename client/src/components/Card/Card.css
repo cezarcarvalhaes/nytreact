@@ -3,7 +3,7 @@ a {
 }
 
 a:hover {
-  color: antiquewhite;
+  color: rgb(247, 64, 40);
   text-decoration: none;
   text-shadow: 2px 2px #444444;  
 }
