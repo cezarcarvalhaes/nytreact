@@ -9,6 +9,9 @@ This application uses the New York Times Article Database API.
 - Mongo DB
 - Mongoose
 - Bootstrap
+- Moment
+- Concurrently
+- Nodemon
 
 ---
 
