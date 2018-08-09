@@ -12,7 +12,8 @@ This application uses the New York Times Article Database API.
 - Moment
 - Concurrently
 - Nodemon
+- React Router DOM
 
 ---
 
-This app was created by Cezar Carvalhaes in 2018.
+*This app was created by Cezar Carvalhaes in 2018.*
